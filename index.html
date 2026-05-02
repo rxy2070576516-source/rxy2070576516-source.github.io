@@ -6,48 +6,45 @@
     <title>预盐优农 - 智慧农业云端入口</title>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Roboto, sans-serif; background-color: #001529; overflow: hidden; }
-        
-        /* 粒子背景容器 */
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background-color: #001529; overflow: hidden; }
         #particles-js { position: absolute; width: 100%; height: 100%; z-index: 1; }
-
-        /* 内容层级 */
         .content { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; height: 100vh; color: white; }
-
+        
         .card { 
             background: rgba(255, 255, 255, 0.05); 
-            backdrop-filter: blur(15px); /* 毛玻璃效果 */
-            padding: 50px; 
+            backdrop-filter: blur(15px); 
+            padding: 40px; 
             border-radius: 30px; 
             border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center; 
             box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
         }
 
-        h1 { font-size: 32px; margin-bottom: 10px; background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h1 { font-size: 28px; margin-bottom: 5px; background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .slogan { font-size: 14px; opacity: 0.7; margin-bottom: 30px; letter-spacing: 1px; }
 
-        .slogan { font-size: 16px; opacity: 0.8; margin-bottom: 40px; letter-spacing: 2px; }
-
-        .qr-wrapper { display: flex; gap: 40px; }
-
-        /* 二维码悬浮交互 */
-        .qr-item { 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            cursor: pointer;
+        /* 新增：进入官网主按钮 */
+        .main-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-bottom: 35px;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+            transition: all 0.3s;
         }
-        .qr-item:hover { transform: translateY(-15px); scale: 1.05; }
+        .main-btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6); }
 
-        .qr-item img { 
-            width: 160px; height: 160px; 
-            border-radius: 15px; 
-            border: 2px solid rgba(79, 172, 254, 0.5);
-            box-shadow: 0 0 20px rgba(79, 172, 254, 0.2);
-        }
+        .qr-wrapper { display: flex; gap: 30px; justify-content: center; }
+        .qr-item { transition: all 0.3s; cursor: pointer; }
+        .qr-item:hover { transform: translateY(-10px); }
+        .qr-item img { width: 130px; height: 130px; border-radius: 12px; border: 1px solid rgba(79, 172, 254, 0.3); }
+        .label { margin-top: 10px; font-size: 12px; color: #4facfe; }
 
-        .label { margin-top: 15px; font-size: 14px; color: #4facfe; font-weight: bold; }
-
-        .footer-info { margin-top: 40px; font-size: 12px; opacity: 0.4; }
+        .footer { margin-top: 30px; font-size: 10px; opacity: 0.3; }
     </style>
 </head>
 <body>
@@ -57,44 +54,35 @@
 <div class="content">
     <div class="card">
         <h1>预盐优农 | 智慧农业实验室</h1>
-        <div class="slogan">科技赋能盐碱地 · 数据重塑农耕之路</div>
+        <div class="slogan">聚焦黄骅盐碱地 · 数字化决策入口</div>
+
+        <a href="main.html" class="main-btn">点击进入官方网站 →</a>
 
         <div class="qr-wrapper">
             <div class="qr-item">
-                <img src="这里换成你的系统二维码图片链接" alt="系统入口">
-                <div class="label">进入交互座舱</div>
+                <img src="你的系统二维码.png" alt="系统入口">
+                <div class="label">系统演示(GitHub)</div>
             </div>
-
             <div class="qr-item">
-                <img src="这里换成你的公众号二维码图片链接" alt="公众号">
-                <div class="label">关注官方动态</div>
+                <img src="你的公众号二维码.png" alt="公众号">
+                <div class="label">官方公众号</div>
             </div>
         </div>
 
-        <div class="footer-info">
-            ACCESS PROTOCOL: HTTPS // RXY2070576516.GITHUB.IO<br>
-            © 2026 PRE-SALT SMART AGRI PROJECT
+        <div class="footer">
+            POWERED BY GITHUB PAGES & PRE-SALT TEAM
         </div>
     </div>
 </div>
 
 <script>
-    /* 粒子特效配置，让背景动起来 */
     particlesJS("particles-js", {
         "particles": {
-            "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+            "number": { "value": 60 },
             "color": { "value": "#4facfe" },
-            "shape": { "type": "circle" },
-            "opacity": { "value": 0.5, "random": false },
-            "size": { "value": 3, "random": true },
-            "line_linked": { "enable": true, "distance": 150, "color": "#4facfe", "opacity": 0.4, "width": 1 },
-            "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } }
-        },
-        "retina_detect": true
+            "line_linked": { "enable": true, "color": "#4facfe", "opacity": 0.2 },
+            "move": { "enable": true, "speed": 1.5 }
+        }
     });
 </script>
 
