@@ -32,7 +32,19 @@
             text-align: center;
             margin-bottom: 3rem;
         }
+        .logo-container {
+            margin-bottom: 1.5rem;
+        }
         .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+            object-fit: cover;
+        }
+        .tagline {
             font-size: 0.9rem;
             color: #94a3b8;
             margin-bottom: 0.5rem;
@@ -78,10 +90,43 @@
             background: rgba(56, 189, 248, 0.2);
             transform: translateX(4px);
         }
-        .team-info {
+        .ppt-content, .team-info, .data-section, .video-box {
             background: rgba(255,255,255,0.05);
             padding: 1.5rem;
             border-radius: 12px;
+        }
+        .ppt-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            color: #cbd5e1;
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .data-card {
+            background: rgba(56, 189, 248, 0.1);
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+        .data-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #38bdf8;
+            margin-bottom: 0.5rem;
+        }
+        .data-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        video {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
         .footer {
             text-align: center;
@@ -96,7 +141,11 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">农业数字化 · 盐碱地治理</div>
+            <div class="logo-container">
+                <!-- 已改为你真实LOGO文件名 -->
+                <img src="./mmexport1777712713024.jpg" alt="预盐优农LOGO" class="logo">
+            </div>
+            <div class="tagline">农业数字化 · 盐碱地治理创新</div>
             <h1>预盐优农 · 黄骅农盐智观图谱系统</h1>
             <p class="subtitle">用数字技术赋能盐碱地农业，构建智慧农业新生态</p>
         </div>
@@ -107,13 +156,54 @@
         </section>
 
         <section>
-            <h2>核心功能</h2>
-            <ul class="feature-list">
-                <li>1. 盐碱地土壤盐分、pH值实时监测与数据可视化</li>
-                <li>2. 作物生长状态动态图谱构建与长势预测</li>
-                <li>3. 改良方案智能推荐与治理效果追踪闭环</li>
-                <li>4. 农业大数据分析与决策辅助平台搭建</li>
-            </ul>
+            <h2>PPT核心内容</h2>
+            <div class="ppt-content">
+                <p><strong>项目背景：</strong>黄骅盐碱地面积广阔，传统农业面临土壤盐渍化严重、监测手段落后、改良效率低下等问题。</p>
+                <p><strong>解决方案：</strong>基于遥感技术与大数据分析，构建农盐智观图谱系统，提供精准预测、辅助决策及一站式治理闭环服务。</p>
+                <p><strong>预期成果：</strong>
+                    <ul>
+                        <li>盐碱地土壤盐分、pH值实时监测与数据可视化</li>
+                        <li>作物生长状态动态图谱构建与长势预测</li>
+                        <li>改良方案智能推荐与治理效果追踪闭环</li>
+                        <li>农业大数据分析与决策辅助平台搭建</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>项目数据成果</h2>
+            <div class="data-section">
+                <div class="data-grid">
+                    <div class="data-card">
+                        <div class="data-value">95%</div>
+                        <div class="data-label">土壤监测准确率</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-value">30%</div>
+                        <div class="data-label">改良效率提升</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-value">5000+</div>
+                        <div class="data-label">监测覆盖面积（亩）</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-value">24h</div>
+                        <div class="data-label">数据更新频率</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>项目演示视频</h2>
+            <div class="video-box">
+                <!-- 已改为你真实视频文件名 -->
+                <video controls muted preload="auto">
+                    <source src="./mmexport1777712715531.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放，请更换浏览器访问。
+                </video>
+            </div>
         </section>
 
         <section>
